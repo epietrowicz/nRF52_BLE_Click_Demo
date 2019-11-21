@@ -1,0 +1,102 @@
+#Generating source browse information for project ble_app_template_pca10040_s132
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build main.pbi : index main.xcl
+build boards.pbi : index boards.xcl
+build bsp.pbi : index bsp.xcl
+build bsp_btn_ble.pbi : index bsp_btn_ble.xcl
+build system_nrf52.pbi : index system_nrf52.xcl
+build ble_advdata.pbi : index ble_advdata.xcl
+build ble_advertising.pbi : index ble_advertising.xcl
+build ble_conn_params.pbi : index ble_conn_params.xcl
+build ble_conn_state.pbi : index ble_conn_state.xcl
+build ble_srv_common.pbi : index ble_srv_common.xcl
+build gatt_cache_manager.pbi : index gatt_cache_manager.xcl
+build gatts_cache_manager.pbi : index gatts_cache_manager.xcl
+build id_manager.pbi : index id_manager.xcl
+build nrf_ble_gatt.pbi : index nrf_ble_gatt.xcl
+build nrf_ble_qwr.pbi : index nrf_ble_qwr.xcl
+build peer_data_storage.pbi : index peer_data_storage.xcl
+build peer_database.pbi : index peer_database.xcl
+build peer_id.pbi : index peer_id.xcl
+build peer_manager.pbi : index peer_manager.xcl
+build pm_buffer.pbi : index pm_buffer.xcl
+build pm_mutex.pbi : index pm_mutex.xcl
+build security_dispatcher.pbi : index security_dispatcher.xcl
+build security_manager.pbi : index security_manager.xcl
+build nrf_drv_clock.pbi : index nrf_drv_clock.xcl
+build nrf_drv_uart.pbi : index nrf_drv_uart.xcl
+build nrfx_clock.pbi : index nrfx_clock.xcl
+build nrfx_gpiote.pbi : index nrfx_gpiote.xcl
+build nrfx_power_clock.pbi : index nrfx_power_clock.xcl
+build nrfx_prs.pbi : index nrfx_prs.xcl
+build nrfx_uart.pbi : index nrfx_uart.xcl
+build nrfx_uarte.pbi : index nrfx_uarte.xcl
+build app_button.pbi : index app_button.xcl
+build app_error.pbi : index app_error.xcl
+build app_error_handler_iar.pbi : index app_error_handler_iar.xcl
+build app_error_weak.pbi : index app_error_weak.xcl
+build app_scheduler.pbi : index app_scheduler.xcl
+build app_timer.pbi : index app_timer.xcl
+build app_util_platform.pbi : index app_util_platform.xcl
+build crc16.pbi : index crc16.xcl
+build fds.pbi : index fds.xcl
+build hardfault_implementation.pbi : index hardfault_implementation.xcl
+build nrf_assert.pbi : index nrf_assert.xcl
+build nrf_atfifo.pbi : index nrf_atfifo.xcl
+build nrf_atflags.pbi : index nrf_atflags.xcl
+build nrf_atomic.pbi : index nrf_atomic.xcl
+build nrf_balloc.pbi : index nrf_balloc.xcl
+build nrf_fprintf.pbi : index nrf_fprintf.xcl
+build nrf_fprintf_format.pbi : index nrf_fprintf_format.xcl
+build nrf_fstorage.pbi : index nrf_fstorage.xcl
+build nrf_fstorage_sd.pbi : index nrf_fstorage_sd.xcl
+build nrf_memobj.pbi : index nrf_memobj.xcl
+build nrf_pwr_mgmt.pbi : index nrf_pwr_mgmt.xcl
+build nrf_section_iter.pbi : index nrf_section_iter.xcl
+build nrf_strerror.pbi : index nrf_strerror.xcl
+build sensorsim.pbi : index sensorsim.xcl
+build nrf_log_backend_rtt.pbi : index nrf_log_backend_rtt.xcl
+build nrf_log_backend_serial.pbi : index nrf_log_backend_serial.xcl
+build nrf_log_backend_uart.pbi : index nrf_log_backend_uart.xcl
+build nrf_log_default_backends.pbi : index nrf_log_default_backends.xcl
+build nrf_log_frontend.pbi : index nrf_log_frontend.xcl
+build nrf_log_str_formatter.pbi : index nrf_log_str_formatter.xcl
+build SEGGER_RTT.pbi : index SEGGER_RTT.xcl
+build SEGGER_RTT_printf.pbi : index SEGGER_RTT_printf.xcl
+build SEGGER_RTT_Syscalls_IAR.pbi : index SEGGER_RTT_Syscalls_IAR.xcl
+build nrf_sdh.pbi : index nrf_sdh.xcl
+build nrf_sdh_ble.pbi : index nrf_sdh_ble.xcl
+build nrf_sdh_soc.pbi : index nrf_sdh_soc.xcl
+build ble_app_template_pca10040_s132_part0.pbi : link main.pbi boards.pbi bsp.pbi bsp_btn_ble.pbi system_nrf52.pbi ble_advdata.pbi ble_advertising.pbi ble_conn_params.pbi
+build ble_app_template_pca10040_s132_part1.pbi : link ble_conn_state.pbi ble_srv_common.pbi gatt_cache_manager.pbi gatts_cache_manager.pbi id_manager.pbi nrf_ble_gatt.pbi nrf_ble_qwr.pbi peer_data_storage.pbi
+build ble_app_template_pca10040_s132_part2.pbi : link peer_database.pbi peer_id.pbi peer_manager.pbi pm_buffer.pbi pm_mutex.pbi security_dispatcher.pbi security_manager.pbi nrf_drv_clock.pbi
+build ble_app_template_pca10040_s132_part3.pbi : link nrf_drv_uart.pbi nrfx_clock.pbi nrfx_gpiote.pbi nrfx_power_clock.pbi nrfx_prs.pbi nrfx_uart.pbi nrfx_uarte.pbi app_button.pbi
+build ble_app_template_pca10040_s132_part4.pbi : link app_error.pbi app_error_handler_iar.pbi app_error_weak.pbi app_scheduler.pbi app_timer.pbi app_util_platform.pbi crc16.pbi fds.pbi
+build ble_app_template_pca10040_s132_part5.pbi : link hardfault_implementation.pbi nrf_assert.pbi nrf_atfifo.pbi nrf_atflags.pbi nrf_atomic.pbi nrf_balloc.pbi nrf_fprintf.pbi nrf_fprintf_format.pbi
+build ble_app_template_pca10040_s132_part6.pbi : link nrf_fstorage.pbi nrf_fstorage_sd.pbi nrf_memobj.pbi nrf_pwr_mgmt.pbi nrf_section_iter.pbi nrf_strerror.pbi sensorsim.pbi nrf_log_backend_rtt.pbi
+build ble_app_template_pca10040_s132_part7.pbi : link nrf_log_backend_serial.pbi nrf_log_backend_uart.pbi nrf_log_default_backends.pbi nrf_log_frontend.pbi nrf_log_str_formatter.pbi SEGGER_RTT.pbi SEGGER_RTT_printf.pbi SEGGER_RTT_Syscalls_IAR.pbi
+build ble_app_template_pca10040_s132_part8.pbi : link nrf_sdh.pbi nrf_sdh_ble.pbi nrf_sdh_soc.pbi
+build ble_app_template_pca10040_s132.pbd : link ble_app_template_pca10040_s132_part0.pbi ble_app_template_pca10040_s132_part1.pbi ble_app_template_pca10040_s132_part2.pbi ble_app_template_pca10040_s132_part3.pbi ble_app_template_pca10040_s132_part4.pbi ble_app_template_pca10040_s132_part5.pbi ble_app_template_pca10040_s132_part6.pbi ble_app_template_pca10040_s132_part7.pbi ble_app_template_pca10040_s132_part8.pbi
+build ble_app_template_pca10040_s132.pbw : browsedata ble_app_template_pca10040_s132.pbd
+
+

@@ -1,0 +1,13 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\armjlink2.dll" 
+
+"X:\Engineering\Bluetooth_Development\FIRMWARE\nRF5_SDK_15.0.0_a53641a\examples\ble_peripheral\nrf52-ble-tutorial-advertising\pca10040\s132\iar\_build\ble_app_template_pca10040_s132.out" 
+
+--plugin="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\armbat.dll" 
+
+--device_macro="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\config\debugger\NordicSemi\nRF52.dmac" 
+
+
+
+
